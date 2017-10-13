@@ -44,24 +44,24 @@ Here is an example using the `YCrCb` color space and HOG parameters of `orientat
 
 ![alt text][image2]
 
-#### * Finalizing HOG parameters.
+####  * Finalizing HOG parameters.
 
 I tried various combinations of parameters and...
 
-#### * Training the classifier using the selected features.
+####  * Training the classifier using the selected features.
 
 I trained a linear SVM using...
 
 
 ### Sliding Window Search
 
-#### * Implementation
+####  * Implementation
 
 I decided to search random window positions at random scales all over the image and came up with this (ok just kidding I didn't actually ;):
 
 ![alt text][image3]
 
-#### * The pipeline.  How do I optimize the performance of my classifier?
+####  * The pipeline.  How do I optimize the performance of my classifier?
 
 Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spatially binned color and histograms of color in the feature vector, which provided a nice result.  Here are some example images:
 
@@ -70,13 +70,13 @@ Ultimately I searched on two scales using YCrCb 3-channel HOG features plus spat
 
 ### Video Implementation
 
-#### * Final project video
+####  * Final project video
 
 
 Here's a [link to my video result](./project_video.mp4)
 
 
-#### * Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
+####  * Describe how (and identify where in your code) you implemented some kind of filter for false positives and some method for combining overlapping bounding boxes.
 
 I recorded the positions of positive detections in each frame of the video.  From the positive detections I created a heatmap and then thresholded that map to identify vehicle positions.  I then used `scipy.ndimage.measurements.label()` to identify individual blobs in the heatmap.  I then assumed each blob corresponded to a vehicle.  I constructed bounding boxes to cover the area of each blob detected.  
 
@@ -98,7 +98,7 @@ Here's an example result showing the heatmap from a series of frames of video, t
 
 ### Discussion
 
-#### * Problems / issues faced in the implementation of this project.  Where will the pipeline likely fail?  Improvements?
+####  * Problems / issues faced in the implementation of this project.  Where will the pipeline likely fail?  Improvements?
 
 Here I'll talk about the approach I took, what techniques I used, what worked and why, where the pipeline might fail and how I might improve it if I were going to pursue this project further.  
 
