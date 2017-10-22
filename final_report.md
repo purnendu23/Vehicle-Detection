@@ -10,6 +10,7 @@
 [find_cars_b]: ./output_images/find_cars_b.png "find_cars_b"
 [heat_img]: ./output_images/heat_img.png "heat_img"
 [detection]: ./output_images/detection.png "detection"
+[False-single-detection]: ./output_images/False-single-detection.jpg "False-single-detection"
 
 
 
@@ -21,11 +22,10 @@ You're reading the writeup! and here is my [project code](https://github.com/pur
 
 #### 1. Extracting HOG features from the training images.
 
-I started by reading in all the `cars` and `non-cars` images (cell []).  Here is an example of one of each of the `cars` and `non-cars` classes:
-
+I started by reading in all the `cars` and `non-cars` images (cell [4]).  Here is an example of one of each of the `cars` and `non-cars` classes:
 ![car]
-
 ![ncar]
+
 I also extract some more images from `project_video.mp4` so that i can test on those images also (cell [13])
 
 I define `get_hog_features` in cell[4] which calls the `hog` function from the `skimage.feature` library to calculate the hog features of an image. I test this on a gray scale image(cell[5]). Cell[9] has the code for `extract_features` method which is used to extract features from all the images.
@@ -37,7 +37,6 @@ Here is an example using the `gray` color space and HOG parameters of `orientati
 #### 2. Finalizing HOG parameters.
 
 I tried various combinations of parameters and finalized on the following:
-
 `
 c_space = 'YUV'
 orient = 11
@@ -45,11 +44,9 @@ pix_per_cell = 16
 cell_per_block = 2
 hog_channel = 'ALL'
 `
-
 #### 3. Training the classifier using the selected features.
 
 I train a linear SVM classifier (cell [31]). I try various features to train the classifier on by modifying the color space and channels above and found best accuracy with c_space = `YUV` and hog_channel = `ALL`. I also try to get more data by augmenting my training examples (cell [33,2]) with translated and rotated images but it does not make much diffrence in the accuracy or even on the final video. So, that is left out.
-
 
 ### Sliding Window Search
 
@@ -58,9 +55,7 @@ I train a linear SVM classifier (cell [31]). I try various features to train the
 I define the `find_cars` function (cell [9]) to implement the sliding window approach.
 Cell[8] has the `draw_boxes` function which is used to draw the boxes on the image and check the scope of `ystart` and `ystop` and the effect of changin the `scale`. Here is the output from the sliding window approach:
 
-![find_cars]
-
-![find_cars_b]
+![find_cars]  ![find_cars_b]
 
 #### 2. Handling false positives and method for combining overlapping bounding boxes.
 
@@ -102,3 +97,6 @@ Here's a [link to my video result](./project_video_out.mp4)
 
 I already play around with #2, #3 in this implementation to reduce the false positives in the final project video output
 
+**False-single-detection:** The following figure from the final output video shows this problem. I do not really know how to get around this problem. Dear reviewer, can you please shed some light on this one:
+
+![False-single-detection]
