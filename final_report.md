@@ -70,7 +70,6 @@ I test the pipeline at this stage in cell[17, 18] and here is the result on all 
 
 ![detection]
 
----
 
 ### Video Implementation
 
