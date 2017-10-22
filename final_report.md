@@ -3,11 +3,15 @@
 
 [//]: # (Image References)
 
-[car_class]: ./output_images/car_class.jpg "car"
-[ncar_class]: ./output_images/ncar_class.jpg "ncar"
+[car]: ./output_images/car_class.jpg "car"
+[ncar]: ./output_images/ncar_class.jpg "ncar"
 [hog_gray]: ./output_images/hog_gray.jpg "hog_gray"
 [find_cars]: ./output_images/find_cars.png "find_cars"
+[find_cars_b]: ./output_images/find_cars_b.png "find_cars_b"
 [heat_img]: ./output_images/heat_img.png "heat_img"
+[detection]: ./output_images/detection.png "detection"
+
+
 
 ### Submission Files/Writeup
 
@@ -57,6 +61,8 @@ I define the `find_cars` function (cell [9]) to implement the sliding window app
 Cell[8] has the `draw_boxes` function which is used to draw the boxes on the image and check the scope of `ystart` and `ystop` and the effect of changin the `scale`. Here is the output from the sliding window approach:
 
 [find_cars][find_cars]
+
+[find_cars_b][find_cars_b]
 
 #### 2. Handling false positives and method for combining overlapping bounding boxes.
 
