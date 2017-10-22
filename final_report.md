@@ -23,9 +23,9 @@ You're reading the writeup! and here is my [project code](https://github.com/pur
 
 I started by reading in all the `cars` and `non-cars` images (cell []).  Here is an example of one of each of the `cars` and `non-cars` classes:
 
-[car][car]
+![car][car]
 
-[ncar][ncar]
+![ncar][ncar]
 
 I also extract some more images from `project_video.mp4` so that i can test on those images also (cell [13])
 
@@ -33,7 +33,7 @@ I define `get_hog_features` in cell[4] which calls the `hog` function from the `
 
 Here is an example using the `gray` color space and HOG parameters of `orientations=9`, `pixels_per_cell=(16, 16)` and `cells_per_block=(2, 2)`:
 
-[hog_gray][hog_gray]
+![hog_gray][hog_gray]
 
 
 #### 2. Finalizing HOG parameters.
@@ -60,9 +60,9 @@ I train a linear SVM classifier (cell [31]). I try various features to train the
 I define the `find_cars` function (cell [9]) to implement the sliding window approach.
 Cell[8] has the `draw_boxes` function which is used to draw the boxes on the image and check the scope of `ystart` and `ystop` and the effect of changin the `scale`. Here is the output from the sliding window approach:
 
-[find_cars][find_cars]
+![find_cars][find_cars]
 
-[find_cars_b][find_cars_b]
+![find_cars_b][find_cars_b]
 
 #### 2. Handling false positives and method for combining overlapping bounding boxes.
 
@@ -75,7 +75,7 @@ Here's an example :
 
 I test the pipeline at this stage in cell[17, 18] and here is the result on all the test images: 
 
-[detection][detection]
+![detection][detection]
 
 ---
 
