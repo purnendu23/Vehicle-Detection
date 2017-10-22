@@ -75,7 +75,7 @@ I test the pipeline at this stage in cell[17, 18] and here is the result on all 
 
 #### 1. Final pipeline
 
-I add the `Box_list` class to hold the boxes detected in the older video frames and redifine my final pipeline `findCarsInVFrame` to accomodate this change. The threshold limit changes here to account for all the boxes detected and stored in the Box_list object.
+I add the `Box_list` class to hold the boxes detected in the older video frames and redefine my final pipeline `findCarsInVFrame` to accomodate this change. The threshold limit changes here to account for all the boxes detected and stored in the Box_list object.
 
 #### 2. Final project video
 
