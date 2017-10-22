@@ -3,9 +3,9 @@
 
 [//]: # (Image References)
 
-[car]: ./output_images/car_class.jpg "car"
-[ncar]: ./output_images/ncar_class.jpg "ncar"
-[hog_gray]: ./output_images/hog_gray.jpg "hog_gray"
+[car]: ./output_images/car_class.png "car"
+[ncar]: ./output_images/ncar_class.png "ncar"
+[hog_gray]: ./output_images/hog_gray.png "hog_gray"
 [find_cars]: ./output_images/find_cars.png "find_cars"
 [find_cars_b]: ./output_images/find_cars_b.png "find_cars_b"
 [heat_img]: ./output_images/heat_img.png "heat_img"
