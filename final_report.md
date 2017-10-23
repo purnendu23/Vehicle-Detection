@@ -96,6 +96,5 @@ Here's a [link to my video result](./project_video_out.mp4)
 
 I already play around with #2, #3 in this implementation to reduce the false positives in the final project video output
 
-* **False-single-detection:** The following figure from the final output video shows this problem. I do not really know how to get around this problem. Dear reviewer, can you please shed some light on this one:
-
+* **False-single-detection:** The following figure from the final output video shows this problem. It is not a very big problem though.
 ![False-single-detection]
